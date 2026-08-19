@@ -1,0 +1,14 @@
+{
+  "cmake.sourceDirectory": "${workspaceFolder}/NEURAL_CPP",
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/NEURAL_CPP/include",
+    "${workspaceFolder}/include",
+    "${workspaceFolder}/**"
+  ],
+  "C_Cpp.default.cppStandard": "c++20",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true
+}

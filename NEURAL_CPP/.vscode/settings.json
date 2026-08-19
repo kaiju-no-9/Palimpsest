@@ -1,0 +1,12 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/include",
+    "${workspaceFolder}/NEURAL_CPP/include",
+    "${workspaceFolder}/**"
+  ],
+  "C_Cpp.default.cppStandard": "c++20",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true
+}

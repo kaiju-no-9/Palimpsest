@@ -1,0 +1,12 @@
+[
+  {
+    "directory": "/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP",
+    "command": "/usr/bin/clang++ -std=c++20 -I/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/include -c /Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/src/nn/tensor.cpp -o /Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/build/tensor.o",
+    "file": "/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/src/nn/tensor.cpp"
+  },
+  {
+    "directory": "/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP",
+    "command": "/usr/bin/clang++ -std=c++20 -I/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/include -c /Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/tests/tests.cpp -o /Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/build/tests.o",
+    "file": "/Users/nishchaykumar/Desktop/Neural_App/NEURAL_CPP/tests/tests.cpp"
+  }
+]
