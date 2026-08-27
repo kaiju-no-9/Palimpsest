@@ -2,6 +2,7 @@
 #include <vector> 
 #include <cstddef>
 #include <iostream>
+#include <memory>
 
 class Tensor
 {
@@ -18,8 +19,9 @@ public:
     Tensor(std::vector<std::vector<std::vector<float>>> data);
 
     // Shape and data getters
-    const std::vector<std::size_t> &shape() const { return shape_; }
-    const std::vector<std::size_t> &stride() const { return stride_; }
+    // for time being not return  shape_ , stride_ as it will leed to double copy of data of tensor , so just make them public for now 
+    const std::vector<std::size_t> &shape() const ; 
+    const std::vector<std::size_t> &stride() const; 
     const std::vector<float> &data() const { return data_; }
 
     // Value accessors
@@ -31,6 +33,10 @@ public:
     float &operator()(std::size_t i);
     const float &operator()(std::size_t i, std::size_t j) const;
     float &operator()(std::size_t i, std::size_t j); 
+
+    // Operations
+    std::shared_ptr<Tensor> operator+(std::shared_ptr<Tensor> other);
+    std::shared_ptr<Tensor> operator*(std::shared_ptr<Tensor> other);
 
     // Stream printing
     friend std::ostream &operator<<(std::ostream &os, const Tensor &obj); 
