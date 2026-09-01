@@ -61,6 +61,12 @@ int main() {
     assert((*res_vs)(2) == 8.0f);
     std::cout << "1D Vector + Scalar ([1, 2, 3] + 5): " << *res_vs << "\n";
 
+    auto res_ms = (*m1) + s1;
+    assert(res_ms->shape().size() == 2);
+    assert((*res_ms)(0, 0) == 6.0f);
+    assert((*res_ms)(1, 1) == 9.0f);
+    std::cout << "2D Matrix + Scalar ([[1,2],[3,4]] + 5):\n" << *res_ms << "\n";
+
     auto v2 = std::make_shared<Tensor>(std::vector<float>{10.0f, 20.0f, 30.0f});
     auto res_vv = (*v1) + v2;
     assert(res_vv->shape().size() == 1);
