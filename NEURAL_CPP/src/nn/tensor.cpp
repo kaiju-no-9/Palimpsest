@@ -43,6 +43,9 @@ Tensor::Tensor(std::vector<std::vector<float>> data, bool requires_grad, std::fu
             data_.push_back(data[i][j]);
         }
     }
+    if (requires_grad) {
+        zero_grad();
+    }
 }
 
 // Tensor item accessors
@@ -108,6 +111,10 @@ const std ::vector<std ::size_t> &Tensor::shape() const {
 }
 const std ::vector<std ::size_t> &Tensor::stride() const {
     return stride_;
+}
+
+const bool &Tensor::requires_grad() const {
+    return requires_grad_;
 }
 
 const bool &Tensor::require_bool() const {
